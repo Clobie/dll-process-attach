@@ -1,0 +1,8 @@
+I'm an idiot, so Game.js and Starter.js 
+need to be copied to the root of your hard drive.
+Like..
+
+C:\Game.js
+C:\Starter.js
+
+Yep
