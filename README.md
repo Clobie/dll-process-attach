@@ -14,31 +14,11 @@ The `GetDllOffset` function retrieves the address of a function within a DLL giv
 
 The `FPTR` macro is used to define a function pointer type and initialize it with the address retrieved by `GetDllOffset`. This macro simplifies the process of defining and initializing function pointers for use within the DLL.
 
+### Example Usage Note
+
+In this example, an outdated pointer address and target DLL were used to print a colored chat message inside Diablo 2. The specific address and DLL (`PrintChat` function in `D2Client.dll`) are no longer correct and are included here purely for illustrative purposes. Users will need to update the pointers and target DLLs according to their specific use case and target application.
+
+
 ### DllMain Function
 
 The `DllMain` function is the entry point for the DLL. It handles different reasons for being called, specifically `DLL_PROCESS_ATTACH` in this example, and calls a function (`PrintChat`) when the DLL is loaded. This function prints a message indicating that the DLL has been loaded and demonstrates the use of function pointers to call DLL functions.
-
-## Usage
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/Clobie/dll-process-attach.git
-    cd dll-process-attach
-    ```
-
-2. Compile the DLL using your preferred C++ compiler (e.g., Visual Studio).
-
-3. Load the compiled DLL into the target process to see the messages printed by the `PrintChat` function.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries or support, please contact [your email address].
-
----
-
-Thank you for exploring this demonstration of DLL process attachment and function offset retrieval in Windows!
